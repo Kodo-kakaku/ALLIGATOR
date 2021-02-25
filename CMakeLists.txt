@@ -1,13 +1,7 @@
 cmake_minimum_required(VERSION 3.2)
 
-if($ENV{TRAVIS_BUILD_NUMBER})
-    project(ip_sortus VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
-    find_package(Boost COMPONENTS unit_test_framework REQUIRED)
-else()
-    project(ip_sortus VERSION 0.0.42)
-    set(BOOST_ROOT "C:\\boost\\include\\boost-1_75")
-    set(BOOST_LIBRARYDIR "C:\\boost\\lib")
-endif()
+project(ip_sortus VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
+ 
 
 configure_file(version.h.in version.h)
 
@@ -17,10 +11,9 @@ add_library (alligat alligator.h)
 add_executable(test_version test_version.cpp)
 
 set_target_properties(alligator keep alligat test_version PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED ON)
-target_include_directories(ip_sortus
+target_include_directories(ALLIGATOR
     PRIVATE "${CMAKE_BINARY_DIR}"
 )
-set_target_properties(test_version PROPERTIES COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR})
 
 target_link_libraries(alligator PRIVATE
         Alligator
@@ -71,7 +64,3 @@ set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
 set(CPACK_PACKAGE_CONTACT example@example.com)
 
 include(CPack)
-
-enable_testing()
-
-add_test(test_version test_version)
