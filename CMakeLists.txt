@@ -29,9 +29,6 @@ if (MSVC)
     target_compile_options(alligat PRIVATE
         /W4
     )
-    target_compile_options(test_version PRIVATE
-        /W4
-    )
 else ()
     target_compile_options(alligator PRIVATE
         -Wall -Wextra -pedantic -Werror
@@ -40,9 +37,6 @@ else ()
         -Wall -Wextra -pedantic -Werror
     )
       target_compile_options(alligat PRIVATE
-        -Wall -Wextra -pedantic -Werror
-    )
-    target_compile_options(test_version PRIVATE
         -Wall -Wextra -pedantic -Werror
     )
 endif()
