@@ -86,7 +86,7 @@ struct custom_alligator {
     }
 
 
-	[[nodiscard]] bool is_buff() const { return is_buff_; }
+	bool is_buff() const { return is_buff_; }
 
     private:
 		bool is_buff_;
