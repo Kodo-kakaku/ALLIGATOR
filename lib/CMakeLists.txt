@@ -17,7 +17,7 @@ add_library(${THIS} ${HEADERS} ${SOURCES})
 set_target_properties(
         ${THIS}
         PROPERTIES
-        CXX_STANDARD 17
+        CXX_STANDARD 14
         CXX_STANDARD_REQUIRED ON
 )
 
