@@ -10,7 +10,7 @@ add_library (keep keeper.h)
 add_library (alligat alligator.h)
 #add_executable(test_version test_version.cpp)
 
-set_target_properties(alligator keep alligat test_version PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED ON)
+set_target_properties(alligator keep alligat PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED ON)
 target_include_directories(alligator
     PRIVATE "${CMAKE_BINARY_DIR}"
 )
