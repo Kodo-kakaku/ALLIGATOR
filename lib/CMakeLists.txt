@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.2)
 
-set(THIS ALLIGATOR)
+set(THIS liballoc)
 set(HEADERS alligator.h keeper.h)
 
 if (DEFINED ENV{TRAVIS_BUILD_NUMBER})
