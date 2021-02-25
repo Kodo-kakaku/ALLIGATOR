@@ -4,8 +4,7 @@
 cmake_minimum_required(VERSION 3.2)
 
 set(THIS liballoc)
-set(HEADERS allocator.h factorial.h fifo.h)
-set(SOURCES factorial.cpp)
+set(HEADERS alligator.h keeper.h)
 
 if (DEFINED ENV{TRAVIS_BUILD_NUMBER})
     project(${THIS} VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
