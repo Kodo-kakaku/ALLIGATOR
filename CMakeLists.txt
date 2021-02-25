@@ -13,7 +13,7 @@ endif()
 
 add_executable (Alligator_cmake   "main.cpp" "alligator.h" "keeper.h")
 
-set_target_properties(Alligator_cmake PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED ON)
+set_target_properties(Alligator_cmake PROPERTIES CXX_STANDARD 14 CXX_STANDARD_REQUIRED ON)
 target_include_directories(Alligator_cmake
     PRIVATE "${CMAKE_BINARY_DIR}"
 )
