@@ -15,8 +15,6 @@ add_subdirectory(src)
 add_subdirectory(lib)
 
 if (NOT DEFINED ENV{PC_00330_80000_00000_AA472})
-    
-    add_subdirectory(test)
 
     set(CPACK_GENERATOR DEB)
 
